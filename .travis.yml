@@ -32,3 +32,5 @@ deploy:
   on:
     branch: release
     repo: DanielHouston/mgmt
+after_success:
+  - sha1sum mgmt

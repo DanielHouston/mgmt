@@ -1,13 +1,14 @@
-.idea/
-.omv/
-.ssh/
-.vagrant/
-.envrc
-old/
-tmp/
-*_stringer.go
-bindata/*.go
-mgmt
-mgmt.static
-mgmt.iml
-rpmbuild/
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binary, build with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Vendor folder as we manage dependencies using our dep manifest
+vendor/
