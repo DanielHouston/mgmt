@@ -27,7 +27,8 @@ deploy:
   provider: releases
   api_key:
     secure: d41CxJpN4NCg60uazjDaeFbaaZNKsfmpHayO2huFqrSdzD3WRxcC82bO+y59PfRYCixcGZYm7H2H9T8ma6MpA9qzL63yencoZAmSoRVgb0Dyw7DgnSvTIK8m1+Nxb8MZLoy3v0b3aDvdN/rAyFn0jCDGuPNdYAOqQhj+gOoQgLT2LlJQUqq6x1QKJwA/T6astVJ/NuvNOTl9R/DxtlzDnqVW08K5CJiKQkTeCRdb2LLTuyo0pD/CTC+vbQGumBbz5A/Wwte1rLlOUf2qH5v8M4koMzu/ZrHSTgp2+TUIvftUg4mxh5nz2ns1UPUz22VYG6/5J9RKTqjf35AbxKwFritCc3sKjqHDVNtBRXqmbAOmo0ImMM5LIC9Ki+Dno0y17wVMZPHepID8mlroyKeOHC3VPu8xUHepT+hQmON4GSk9oS8NqJA8Iy2Dfh/8cdQMtkOMdzb/vqm+WQGmqvc4bMQz+XCwBHtnpGwVE8IHG54r8WLdeN7e+TOewy65BPy9i5xTCBhbCTCDZpXTImSxfs8vrD+u5hwFlungQyiBQ4MlHWPUTbElLgtBGTIEpety5EQLpo323GX+ARxQuDUJj+mVgUMCDt8sLnMJms0qZhFdf9dZGPgi9DLkqUrTsVzhyfUAd/RhvrFa0Lj4Stik3yJtFk/aoj6owHgO4H98pWk=
-  file: mgmt
+  file_grob: true
+  file: "mgmt"
   on:
     branch: release
     repo: DanielHouston/mgmt
