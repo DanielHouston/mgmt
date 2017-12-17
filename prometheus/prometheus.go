@@ -201,7 +201,6 @@ func (obj *Prometheus) UpdatePgraphStartTime() error {
 	if obj == nil {
 		return nil // happens when mgmt is launched without --prometheus
 	}
-	obj.pgraphStartTimeSeconds.SetToCurrentTime()
 	return nil
 }
 
