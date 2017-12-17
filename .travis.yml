@@ -33,4 +33,4 @@ deploy:
     branch: release
     repo: DanielHouston/mgmt
 after_success:
-  - sha1sum /home/daniel/gopath/src/github.com/purpleidea/mgmt/mgmt
+  - sha1sum mgmt
