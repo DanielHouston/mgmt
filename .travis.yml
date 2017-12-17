@@ -1,35 +1,33 @@
 language: go
 go:
-  - 1.8.x
-  - 1.9.x
-  - tip
+- 1.8.x
+- 1.9.x
+- tip
 go_import_path: github.com/purpleidea/mgmt
 sudo: true
 dist: trusty
 before_install:
-  - sudo apt update
-  - git config remote.origin.fetch +refs/heads/${TRAVIS_BRANCH}:refs/remotes/origin/${TRAVIS_BRANCH}
-  - git fetch --unshallow
-install: 'make deps'
-script: 'make test'
+- sudo apt update
+- git config remote.origin.fetch +refs/heads/${TRAVIS_BRANCH}:refs/remotes/origin/${TRAVIS_BRANCH}
+- git fetch --unshallow
+install: make deps
+script: make test
 matrix:
   fast_finish: true
   allow_failures:
-    - go: tip
-    - go: 1.9.x
+  - go: tip
+  - go: 1.9.x
 notifications:
-  irc:
-    channels:
-      - "irc.freenode.net#mgmtconfig"
-    template:
-      - "%{repository} (%{commit}: %{author}): %{message}"
-      - "More info : %{build_url}"
-    on_success: always
-    on_failure: always
-    use_notice: false
-    skip_join: false
   email:
     recipients:
-      - travis-ci@shubin.ca
+    - houston@wehaveaproblem.co.uk
     on_failure: change
     on_success: change
+deploy:
+  provider: releases
+  api_key:
+    secure: d41CxJpN4NCg60uazjDaeFbaaZNKsfmpHayO2huFqrSdzD3WRxcC82bO+y59PfRYCixcGZYm7H2H9T8ma6MpA9qzL63yencoZAmSoRVgb0Dyw7DgnSvTIK8m1+Nxb8MZLoy3v0b3aDvdN/rAyFn0jCDGuPNdYAOqQhj+gOoQgLT2LlJQUqq6x1QKJwA/T6astVJ/NuvNOTl9R/DxtlzDnqVW08K5CJiKQkTeCRdb2LLTuyo0pD/CTC+vbQGumBbz5A/Wwte1rLlOUf2qH5v8M4koMzu/ZrHSTgp2+TUIvftUg4mxh5nz2ns1UPUz22VYG6/5J9RKTqjf35AbxKwFritCc3sKjqHDVNtBRXqmbAOmo0ImMM5LIC9Ki+Dno0y17wVMZPHepID8mlroyKeOHC3VPu8xUHepT+hQmON4GSk9oS8NqJA8Iy2Dfh/8cdQMtkOMdzb/vqm+WQGmqvc4bMQz+XCwBHtnpGwVE8IHG54r8WLdeN7e+TOewy65BPy9i5xTCBhbCTCDZpXTImSxfs8vrD+u5hwFlungQyiBQ4MlHWPUTbElLgtBGTIEpety5EQLpo323GX+ARxQuDUJj+mVgUMCDt8sLnMJms0qZhFdf9dZGPgi9DLkqUrTsVzhyfUAd/RhvrFa0Lj4Stik3yJtFk/aoj6owHgO4H98pWk=
+  file: mgmt
+  on:
+    branch: release
+    repo: DanielHouston/mgmt
