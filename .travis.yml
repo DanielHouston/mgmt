@@ -11,7 +11,7 @@ before_install:
 - git config remote.origin.fetch +refs/heads/${TRAVIS_BRANCH}:refs/remotes/origin/${TRAVIS_BRANCH}
 - git fetch --unshallow
 install: make deps
-script: make test
+script: make build
 matrix:
   fast_finish: true
   allow_failures:
