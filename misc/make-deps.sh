@@ -70,7 +70,8 @@ if go version | grep 'go1\.[012345]\.'; then
 	exit 1
 fi
 
-go get -d ./...	# get all the go dependencies
 [ -e "$GOBIN/mgmt" ] && rm -f "$GOBIN/mgmt"	# the `go get` version has no -X
+go get -u github.com/golang/dep/cmd/dep
+go install github.com/golang/dep/cmd/dep
 dep ensure
 cd "$XPWD" >/dev/null
