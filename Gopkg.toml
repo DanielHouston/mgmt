@@ -111,3 +111,7 @@
 [[constraint]]
   branch = "master"
   name = "honnef.co/go/augeas"
+
+[[constraint]]
+  name = "github.com/jteeuwen/go-bindata"
+  version = "3.0.7"
