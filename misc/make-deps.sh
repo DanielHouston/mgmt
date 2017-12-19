@@ -78,6 +78,8 @@ go get github.com/jteeuwen/go-bindata/go-bindata
 go install github.com/jteeuwen/go-bindata/go-bindata
 go get github.com/golang/lint/golint			# for `golint`-ing		
 go install github.com/golang/lint/golint
+go get golang.org/x/tools/cmd/stringer	
+go install golang.org/x/tools/cmd/stringer	
 go get -u gopkg.in/alecthomas/gometalinter.v1 && mv "$(dirname $(which gometalinter.v1))/gometalinter.v1" "$(dirname $(which gometalinter.v1))/gometalinter" && gometalinter --install	# bonus
 dep ensure
 #etcd seems to come with generated file which does not build?
