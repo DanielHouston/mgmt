@@ -77,7 +77,9 @@ go install github.com/golang/dep/cmd/dep
 go get github.com/jteeuwen/go-bindata/go-bindata 
 go install github.com/jteeuwen/go-bindata/go-bindata
 go get github.com/golang/lint/golint			# for `golint`-ing		
-go install githumb.com/golang/lint/golint
+go install github.com/golang/lint/golint
 go get -u gopkg.in/alecthomas/gometalinter.v1 && mv "$(dirname $(which gometalinter.v1))/gometalinter.v1" "$(dirname $(which gometalinter.v1))/gometalinter" && gometalinter --install	# bonus
 dep ensure
+#etcd seems to come with generated file which does not build?
+rm vendor/github.com/coreos/etcd/client/keys.generated.go
 cd "$XPWD" >/dev/null
