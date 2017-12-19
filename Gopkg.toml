@@ -26,7 +26,7 @@
 
 [[constraint]]
   name = "github.com/coreos/etcd"
-  version = "3.2.11"
+  revision = "bb66589f8cf18960c7f3d56b1b83753caeed9c7a"
 
 [[constraint]]
   name = "github.com/coreos/go-systemd"
@@ -98,11 +98,11 @@
 
 [[constraint]]
   name = "google.golang.org/grpc"
-  version = "1.8.2"
+  revision = "b8669c35455183da6d5c474ea6e72fbf55183274"
 
 [[constraint]]
   name = "gopkg.in/fsnotify.v1"
-  version = "1.4.2"
+  revision = "7be54206639f256967dd82fa767397ba5f8f48f5"
 
 [[constraint]]
   branch = "v2"
