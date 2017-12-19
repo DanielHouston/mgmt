@@ -111,7 +111,7 @@
 [[constraint]]
   branch = "master"
   name = "honnef.co/go/augeas"
-  revision = "1e2ddf1"
+  revision = "1e2ddf1bad06f9e1cfdd62dd909c4fcb7f82e114"
 
 [[constraint]]
   name = "github.com/jteeuwen/go-bindata"
